@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Professor X">
+    <meta name="description" content="Página para ensinar sobre metadados escolares com pegadinhas divertidas e enigmas intrigantes">
+    <meta name="school-grade" content="8º Ano">
+    <meta name="assignment-type" content="Redação">
+    <meta name="student-name" content="João Silva">
+    <meta name="submission-date" content="2024-12-19">
+    <meta name="teacher-comment" content="Atenção! Há mais do que parece aqui.">
+    <meta name="hidden-message" content="Parabéns! Você encontrou o segredo. Mostre isso ao professor para um bônus.">
+    <meta name="easter-egg" content="O código é 42">
+    <title>Metadados Escolares</title>
+    <script>
+        function checkCode() {
+            const userInput = document.getElementById('codeInput').value;
+            if (userInput === '42') {
+                alert('Parabéns! Você foi o primeiro a encontrar o código!');
+                document.getElementById('congratsMessage').style.display = 'block';
+            } else {
+                alert('Código incorreto. Tente novamente!');
+            }
+        }
+
+        function toggleHint() {
+            const hint = document.getElementById('hint');
+            hint.style.display = hint.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+            color: green;
+            font-weight: bold;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explorando os Metadados Escolares</h1>
+    <p>
+        Bem-vindo a uma aventura digital! Aqui, vamos explorar os mistérios dos metadados. Você acha que tudo o que precisa saber está visível nesta página? Pense de novo! Confira o código-fonte e veja o que está escondido.
+    </p>
+
+    <h2>Desafios:</h2>
+    <ol>
+        <li>Encontre o nome do autor misterioso nos metadados.</li>
+        <li>Descubra qual "mensagem secreta" está escondida.</li>
+        <li>Identifique o código oculto para ganhar um ponto extra!</li>
+        <li>Qual é o comentário exclusivo do professor sobre esta página?</li>
+    </ol>
+
+    <h2>Brincadeira Extra:</h2>
+    <p>
+        Insira o código secreto para desbloquear uma mensagem especial:
+    </p>
+    <input type="text" id="codeInput" placeholder="Digite o código aqui">
+    <button onclick="checkCode()">Enviar</button>
+    <p id="congratsMessage" class="hidden">🎉 Parabéns! Você desbloqueou o segredo. Mostre isso ao professor!</p>
+
+    <h2>Precisa de ajuda?</h2>
+    <button onclick="toggleHint()">Mostrar/Esconder Dica</button>
+    <p id="hint" class="hidden">Abra as ferramentas do navegador apertando <strong>F12</strong>. Clique nas setinhas ao lado das linhas para desocultar mais informações. Preste atenção nos detalhes escondidos! 😉</p>
+
+    <footer>
+        <p>Página criada como exemplo educacional. Todos os dados aqui são fictícios, mas as lições são reais!</p>
+    </footer>
+</body>
+</html>
